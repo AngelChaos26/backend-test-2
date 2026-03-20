@@ -310,6 +310,7 @@ GEM
     thruster (0.1.18-aarch64-linux)
     thruster (0.1.18-arm64-darwin)
     thruster (0.1.18-x86_64-linux)
+    timecop (0.9.10)
     timeout (0.6.0)
     tsort (0.2.0)
     tzinfo (2.0.6)
@@ -347,6 +348,7 @@ DEPENDENCIES
   solid_queue
   sqlite3 (>= 2.1)
   thruster
+  timecop
   tzinfo-data
 
 BUNDLED WITH

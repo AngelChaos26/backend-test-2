@@ -8,6 +8,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 # that will avoid rails generators crashing because migrations haven't been run yet
 # return unless Rails.env.test?
 require 'rspec/rails'
+require 'timecop'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Load support files
@@ -75,6 +76,10 @@ RSpec.configure do |config|
 
   # FactoryBot configuration
   config.include FactoryBot::Syntax::Methods
+
+  config.after(:each) do
+    Timecop.return
+  end
 
   # Infer spec type from file location
   config.infer_spec_type_from_file_location!
